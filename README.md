@@ -16,10 +16,6 @@ It fetches real-time weather data from the [WeatherAPI](https://www.weatherapi.c
 
 ---
 
-## 🖼Preview
-![Weather App Screenshot](bg.jpg)  
----
-
 ## Tech Stack
 - **HTML5** – Structure of the app  
 - **CSS3** – Styling with modern UI  
