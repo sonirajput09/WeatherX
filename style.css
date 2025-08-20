@@ -1,0 +1,72 @@
+body {
+       margin: 0;
+       padding: 0;
+       height: 100vh;
+       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url("bg.jpg") no-repeat center center fixed;
+       background-size: cover;
+       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       color: rgb(235, 235, 235);
+}
+
+.container {
+       background: rgba(255, 255, 255, 0.126);
+       padding: 50px 520px;
+       border-radius: 20px;
+       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+       text-align: center;
+       width: 350px;
+       transition: transform 0.3s ease-in-out;
+}
+
+h2 {
+       font-size: 30px;
+       margin-top: 20px;
+       margin-left: 650px;
+       color: rgb(245, 245, 246);
+       font-style: italic;
+       font-weight: bolder;
+       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+    .weather-icon {
+      font-size: 60px;
+      color: #ff9800;
+      margin-bottom: 15px;
+    }
+
+div input {
+       margin: 7px;
+       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.search-box {
+       margin: 7px;
+}
+
+.search-box input {
+       padding: 5px;
+       border: none;
+       border-radius: 6px;
+       font-size: 16px;
+       outline: none;
+}
+
+.search-box button {
+       padding: 7px;
+       border: none;
+       border-radius: 6px;
+       font-size: 16px;
+       background: #007BFF;
+       color: white;
+       cursor: pointer;
+}
+
+.search-box button:hover {
+       background: #0056b3;
+}
+
+.weather-info {
+       font-size: 20px;
+       margin-left: 15px;
+       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
