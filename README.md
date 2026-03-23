@@ -25,3 +25,6 @@ It fetches real-time weather data from the [WeatherAPI](https://www.weatherapi.c
 ---
 
 ## Project Structure
+
+## 🌐 Live Demo
+[Click here to view live site](https://stunning-mandazi-558787.netlify.app/)
