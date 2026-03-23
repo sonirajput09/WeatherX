@@ -1,5 +1,10 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+/* 🌍 BODY */
 body {
     min-height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.9)),
@@ -7,38 +12,47 @@ body {
     background-size: cover;
     font-family: 'Poppins', sans-serif;
     color: #fff;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px 20px;
+    justify-content: center;
+
+    padding: 20px 10px;
 }
 
+/* 🔥 TITLE */
 h2 {
     font-size: 36px;
     font-weight: 600;
     font-style: italic;
     letter-spacing: 2px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     text-shadow: 0 0 20px rgba(255,255,255,0.3);
 }
 
+/* 📦 MAIN CONTAINER */
 .container {
     background: rgba(255,255,255,0.1);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
     padding: 40px 30px;
     border-radius: 24px;
     border: 1px solid rgba(255,255,255,0.15);
+
     box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+
     width: 100%;
     max-width: 420px;
     text-align: center;
 }
 
+/* 🔍 SEARCH BOX */
 .search-box {
     display: flex;
     gap: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .search-box input {
@@ -47,14 +61,15 @@ h2 {
     border: 1px solid rgba(255,255,255,0.25);
     border-radius: 12px;
     font-size: 15px;
-    font-family: 'Poppins', sans-serif;
     background: rgba(255,255,255,0.1);
     color: #fff;
     outline: none;
-    transition: border 0.3s;
+    transition: 0.3s;
 }
 
-.search-box input::placeholder { color: rgba(255,255,255,0.5); }
+.search-box input::placeholder {
+    color: rgba(255,255,255,0.5);
+}
 
 .search-box input:focus {
     border: 1px solid rgba(255,255,255,0.6);
@@ -65,12 +80,13 @@ h2 {
     border: none;
     border-radius: 12px;
     font-size: 15px;
-    font-family: 'Poppins', sans-serif;
     font-weight: 600;
+
     background: linear-gradient(135deg, #007BFF, #0056b3);
     color: white;
     cursor: pointer;
-    transition: transform 0.2s, background 0.3s;
+
+    transition: 0.3s;
 }
 
 .search-box button:hover {
@@ -78,27 +94,43 @@ h2 {
     transform: scale(1.05);
 }
 
-.weather-info { animation: fadeIn 0.5s ease; }
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to   { opacity: 1; transform: translateY(0); }
+/* 🌦️ WEATHER INFO */
+.weather-info {
+    animation: fadeIn 0.5s ease;
 }
 
-.weather-icon { font-size: 64px; margin-bottom: 10px; }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
+/* 🌤️ ICON */
+.weather-icon {
+    font-size: 64px;
+    margin-bottom: 10px;
+}
+
+/* 📍 CITY */
 #city-name {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 6px;
 }
 
+/* 🕐 TIME */
 #city-time {
     font-size: 13px;
     color: rgba(255,255,255,0.6);
     margin-bottom: 16px;
 }
 
+/* 🌡️ TEMP */
 .temp-box {
     margin: 10px 0 20px;
 }
@@ -111,6 +143,7 @@ h2 {
     -webkit-text-fill-color: transparent;
 }
 
+/* 📊 EXTRA INFO */
 .extra-info {
     display: flex;
     justify-content: space-between;
@@ -124,6 +157,7 @@ h2 {
     border: 1px solid rgba(255,255,255,0.12);
     border-radius: 14px;
     padding: 12px 8px;
+
     display: flex;
     flex-direction: column;
     gap: 6px;
@@ -137,4 +171,755 @@ h2 {
 .info-card span:last-child {
     font-size: 15px;
     font-weight: 600;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 600px) {
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .container {
+        padding: 25px 15px;
+        max-width: 95%;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+
+    #city-temp {
+        font-size: 42px;
+    }
+
+    .extra-info {
+        flex-direction: column;
+    }
+
+    .info-card {
+        width: 100%;
+    }
+}
+
+/* 📲 TABLET */
+@media (max-width: 900px) {
+
+    .container {
+        max-width: 80%;
+    }
+
+    #city-temp {
+        font-size: 48px;
+    }
+}
+
+/* 💻 LARGE SCREEN */
+@media (min-width: 1200px) {
+
+    .container {
+        max-width: 500px;
+        padding: 50px;
+    }
+
+    #city-temp {
+        font-size: 64px;
+    }
+}* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 🌍 BODY */
+body {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.9)),
+                url("bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px 10px;
+}
+
+/* 🔥 TITLE */
+h2 {
+    font-size: 36px;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    text-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+/* 📦 MAIN CONTAINER */
+.container {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    padding: 40px 30px;
+    border-radius: 24px;
+    border: 1px solid rgba(255,255,255,0.15);
+
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+}
+
+/* 🔍 SEARCH BOX */
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 12px;
+    font-size: 15px;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    outline: none;
+    transition: 0.3s;
+}
+
+.search-box input::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+.search-box input:focus {
+    border: 1px solid rgba(255,255,255,0.6);
+}
+
+.search-box button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+
+    background: linear-gradient(135deg, #007BFF, #0056b3);
+    color: white;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: linear-gradient(135deg, #0056b3, #003d80);
+    transform: scale(1.05);
+}
+
+/* 🌦️ WEATHER INFO */
+.weather-info {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 🌤️ ICON */
+.weather-icon {
+    font-size: 64px;
+    margin-bottom: 10px;
+}
+
+/* 📍 CITY */
+#city-name {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+/* 🕐 TIME */
+#city-time {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 16px;
+}
+
+/* 🌡️ TEMP */
+.temp-box {
+    margin: 10px 0 20px;
+}
+
+#city-temp {
+    font-size: 56px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #fff, #a8d8ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 📊 EXTRA INFO */
+.extra-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.info-card {
+    flex: 1;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+    padding: 12px 8px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.55);
+}
+
+.info-card span:last-child {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 600px) {
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .container {
+        padding: 25px 15px;
+        max-width: 95%;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+
+    #city-temp {
+        font-size: 42px;
+    }
+
+    .extra-info {
+        flex-direction: column;
+    }
+
+    .info-card {
+        width: 100%;
+    }
+}
+
+/* 📲 TABLET */
+@media (max-width: 900px) {
+
+    .container {
+        max-width: 80%;
+    }
+
+    #city-temp {
+        font-size: 48px;
+    }
+}
+
+/* 💻 LARGE SCREEN */
+@media (min-width: 1200px) {
+
+    .container {
+        max-width: 500px;
+        padding: 50px;
+    }
+
+    #city-temp {
+        font-size: 64px;
+    }
+}* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 🌍 BODY */
+body {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.9)),
+                url("bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px 10px;
+}
+
+/* 🔥 TITLE */
+h2 {
+    font-size: 36px;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    text-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+/* 📦 MAIN CONTAINER */
+.container {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    padding: 40px 30px;
+    border-radius: 24px;
+    border: 1px solid rgba(255,255,255,0.15);
+
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+}
+
+/* 🔍 SEARCH BOX */
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 12px;
+    font-size: 15px;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    outline: none;
+    transition: 0.3s;
+}
+
+.search-box input::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+.search-box input:focus {
+    border: 1px solid rgba(255,255,255,0.6);
+}
+
+.search-box button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+
+    background: linear-gradient(135deg, #007BFF, #0056b3);
+    color: white;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: linear-gradient(135deg, #0056b3, #003d80);
+    transform: scale(1.05);
+}
+
+/* 🌦️ WEATHER INFO */
+.weather-info {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 🌤️ ICON */
+.weather-icon {
+    font-size: 64px;
+    margin-bottom: 10px;
+}
+
+/* 📍 CITY */
+#city-name {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+/* 🕐 TIME */
+#city-time {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 16px;
+}
+
+/* 🌡️ TEMP */
+.temp-box {
+    margin: 10px 0 20px;
+}
+
+#city-temp {
+    font-size: 56px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #fff, #a8d8ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 📊 EXTRA INFO */
+.extra-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.info-card {
+    flex: 1;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+    padding: 12px 8px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.55);
+}
+
+.info-card span:last-child {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 600px) {
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .container {
+        padding: 25px 15px;
+        max-width: 95%;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+
+    #city-temp {
+        font-size: 42px;
+    }
+
+    .extra-info {
+        flex-direction: column;
+    }
+
+    .info-card {
+        width: 100%;
+    }
+}
+
+/* 📲 TABLET */
+@media (max-width: 900px) {
+
+    .container {
+        max-width: 80%;
+    }
+
+    #city-temp {
+        font-size: 48px;
+    }
+}
+
+/* 💻 LARGE SCREEN */
+@media (min-width: 1200px) {
+
+    .container {
+        max-width: 500px;
+        padding: 50px;
+    }
+
+    #city-temp {
+        font-size: 64px;
+    }
+}* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 🌍 BODY */
+body {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.9)),
+                url("bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px 10px;
+}
+
+/* 🔥 TITLE */
+h2 {
+    font-size: 36px;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    text-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+/* 📦 MAIN CONTAINER */
+.container {
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    padding: 40px 30px;
+    border-radius: 24px;
+    border: 1px solid rgba(255,255,255,0.15);
+
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+}
+
+/* 🔍 SEARCH BOX */
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 12px;
+    font-size: 15px;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    outline: none;
+    transition: 0.3s;
+}
+
+.search-box input::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+.search-box input:focus {
+    border: 1px solid rgba(255,255,255,0.6);
+}
+
+.search-box button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+
+    background: linear-gradient(135deg, #007BFF, #0056b3);
+    color: white;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: linear-gradient(135deg, #0056b3, #003d80);
+    transform: scale(1.05);
+}
+
+/* 🌦️ WEATHER INFO */
+.weather-info {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 🌤️ ICON */
+.weather-icon {
+    font-size: 64px;
+    margin-bottom: 10px;
+}
+
+/* 📍 CITY */
+#city-name {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+/* 🕐 TIME */
+#city-time {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 16px;
+}
+
+/* 🌡️ TEMP */
+.temp-box {
+    margin: 10px 0 20px;
+}
+
+#city-temp {
+    font-size: 56px;
+    font-weight: 600;
+    background: linear-gradient(135deg, #fff, #a8d8ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 📊 EXTRA INFO */
+.extra-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.info-card {
+    flex: 1;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 14px;
+    padding: 12px 8px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.label {
+    font-size: 11px;
+    color: rgba(255,255,255,0.55);
+}
+
+.info-card span:last-child {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 600px) {
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .container {
+        padding: 25px 15px;
+        max-width: 95%;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box button {
+        width: 100%;
+    }
+
+    #city-temp {
+        font-size: 42px;
+    }
+
+    .extra-info {
+        flex-direction: column;
+    }
+
+    .info-card {
+        width: 100%;
+    }
+}
+
+/* 📲 TABLET */
+@media (max-width: 900px) {
+
+    .container {
+        max-width: 80%;
+    }
+
+    #city-temp {
+        font-size: 48px;
+    }
+}
+
+/* 💻 LARGE SCREEN */
+@media (min-width: 1200px) {
+
+    .container {
+        max-width: 500px;
+        padding: 50px;
+    }
+
+    #city-temp {
+        font-size: 64px;
+    }
 }
